@@ -43,9 +43,9 @@ text-align: center;
 footer {
     display: flex;
     justify-content: center;
-    align-items: center
+    align-items: center;
     height: 60px;
-    background-color: darkgcyan;
+    background-color: darkcyan;
     color: #fff;
 }
 
