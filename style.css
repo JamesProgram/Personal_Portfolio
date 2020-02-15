@@ -61,6 +61,7 @@ h1, p {
     display: flex;
     justify-content: space-evenly;
     margin: 6rem;
+    height: 20rem;
     flex-wrap: wrap;
     background-color: #000;
 }
