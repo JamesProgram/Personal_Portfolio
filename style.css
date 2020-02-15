@@ -74,8 +74,8 @@ h1, p {
     background-color: grey;
   }
   
-  #contact-section-header > h2 {
-    font-size: 6rem;
+  #contact a  {
+    color: white;
   }
 
 #a {
