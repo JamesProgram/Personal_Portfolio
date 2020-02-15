@@ -53,13 +53,15 @@ text-align: center;
 }
 
 h1, p {
-    color: #fff;
+    color: #000;
+    text-align: center;
 }
 
 #contact {
     display: flex;
     justify-content: space-evenly;
     margin: 6rem;
+    flex-wrap: wrap;
     background-color: #000;
 }
 
