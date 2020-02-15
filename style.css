@@ -31,6 +31,16 @@ body {
     color: white;
 }
 
+#welcome-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+}
+
 #project-list {
     display: flex;
     justify-content: space-evenly;
@@ -38,6 +48,10 @@ body {
 
 figcaption {
 text-align: center;
+}
+
+h1 {
+    color: #fff;
 }
 
 footer {
