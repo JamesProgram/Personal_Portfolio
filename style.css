@@ -79,6 +79,12 @@ h1, p {
     padding: 0 2rem;
     background-color: grey;
   }
+
+  .contact-header {
+    text-align: center;
+    color: white;
+    background-color: grey;
+  }
   
   #contact a  {
     color: white;
