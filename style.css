@@ -15,6 +15,7 @@ body {
     position: fixed;
     background-color: darkslateblue;
     width: 100%;
+    scroll-behavior: smooth;
 }
 
 .nav-list {
@@ -86,7 +87,6 @@ text-align: center;
   
   #contact a  {
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
   }
 
 #a {
