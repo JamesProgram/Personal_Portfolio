@@ -1,15 +1,27 @@
 import { films } from '../data/films.js'
-
-console.log('Hi there welcome to my page')
-
-//console.log(document.querySelector(".greeting"))
+import { people } from '../data/people.js'
+import { starships } from '../data/starships.js'
 
 const greetingDiv = document.querySelector(".greeting")
 
-greetingDiv.textContent = "I just intserted text into a DOM element using my mad JavaScript skills!"
+const castList = document.createElement ("ul")
 
-console.log(greetingDiv.textContent)
 
-console.log(films)
 
-greetingDiv.textContent = films [0].opening_crawl
+let counter = 1
+
+people.forEach(person => {
+   let listItem = document.createElement("li")
+   listItem.textContent = person.name
+
+   castList.appendChild(listItem)
+
+   let imageItem = document.createElement("img")
+   imageItem.src = ""
+   greetingDiv.appendChild(imageItem)
+   // add some way to handle user clicks on the image
+   imageItem.addEventListener("click", () => console.log("Click happend"))
+   counter++
+});
+
+greetingDiv.appendChild(castList)
