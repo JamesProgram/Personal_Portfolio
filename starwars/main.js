@@ -3,19 +3,28 @@ import { people } from '../data/people.js'
 import { starships } from '../data/starships.js'
 
 const greetingDiv = document.querySelector(".greeting")
-const maleButton = document.querySelector("maleButton")
-const femaleButton = document.querySelector("femaleButton")
-const otherButton = document.querySelector("otherButton")
-//const castList = document.createElement ("ul")
+const maleButton = document.querySelector("#maleButton")
+const femaleButton = document.querySelector("#femaleButton")
+const otherButton = document.querySelector("#otherButton")
 
+const maleCharacters = people.filter(person => person.gender === "male");
+console.log(maleCharacters)
+
+const femaleCharacters = people.filter(person => person.gender === "female");
+console.log(femaleCharacters)
+
+const otherCharacters = people.filter(person => {
+   if (person.gender === "hermaphrodite" || person.gender === "n/a") {
+      return person
+   }
+})
+
+console.log(otherCharacters)
 
 
 let counter = 1
 
 people.forEach(person => {
-   //let listItem = document.createElement("li")
-   //listItem.textContent = person.name
-   //castList.appendChild(listItem)
 
    let anchorWrap = document.createElement("a")
    anchorWrap.href = "#"
@@ -38,4 +47,8 @@ people.forEach(person => {
 anchorWrap.appendChild(imageItem)
 greetingDiv.appendChild(anchorWrap)
 counter++
+})
+
+maleButton.addEventListener("click", (event) => {
+ console.log("Clicked on maleButton")
 })
