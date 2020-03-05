@@ -8,29 +8,41 @@ const femaleButton = document.querySelector("#femaleButton")
 const otherButton = document.querySelector("#otherButton")
 
 const maleCharacters = people.filter(person => person.gender === "male");
-console.log(maleCharacters)
 
 const femaleCharacters = people.filter(person => person.gender === "female");
-console.log(femaleCharacters)
 
 const otherCharacters = people.filter(person => {
-   if (person.gender === "hermaphrodite" || person.gender === "n/a") {
+   if (person.gender === "hermaphrodite" 
+   || person.gender === "n/a" 
+   || person.gender === "none") {
       return person
    }
 })
 
-console.log(otherCharacters)
 
+maleButton.addEventListener("click", (event) => {
+   populateDOM(maleCharacters)
+  })
 
-let counter = 1
+//"url": "https://swapi.co/api/people.10/"
 
-people.forEach(person => {
+function getCharNumber(url) {
+let end = url.lastIndexOf('/')
+let start = end - 2
+console.log(`Start is: ${url.charAt(start)} and end is: ${url.charAt(end)}`)
+}
 
+getCharNumber("https://swapi.co/api/people.10/")
+
+function populateDOM(maleCharacters)
+{maleCharacters.forEach(person => {
+   // need to extract the number from the person.url property
+   let charNum = 1
    let anchorWrap = document.createElement("a")
    anchorWrap.href = "#"
 
    let imageItem = document.createElement("img")
-   imageItem.src = `https://starwars-visualguide.com/assets/img/characters/${counter}.jpg`
+   imageItem.src = `https://starwars-visualguide.com/assets/img/characters/${charNum}.jpg`
 
    imageItem.addEventListener('error', (event) => {
       //log.textContent = log.textContent + `${event.type}: Loading image\n`;
@@ -46,9 +58,6 @@ people.forEach(person => {
 })
 anchorWrap.appendChild(imageItem)
 greetingDiv.appendChild(anchorWrap)
-counter++
-})
 
-maleButton.addEventListener("click", (event) => {
- console.log("Clicked on maleButton")
 })
+}
