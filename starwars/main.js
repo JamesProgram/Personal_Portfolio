@@ -7,9 +7,6 @@ const maleButton = document.querySelector("#maleButton")
 const femaleButton = document.querySelector("#femaleButton")
 const otherButton = document.querySelector("#otherButton")
 
-const maleCharacters = people.filter(person => person.gender === "male");
-
-const femaleCharacters = people.filter(person => person.gender === "female");
 
 const otherCharacters = people.filter(person => {
    if (person.gender === "hermaphrodite" 
@@ -20,8 +17,16 @@ const otherCharacters = people.filter(person => {
 })
 
 
-maleButton.addEventListener("click", (event) => {
-   populateDOM(maleCharacters)
+maleButton.addEventListener("click", event => {
+   populateDOM(people.filter(person => person.gender === "male"))
+  })
+
+  femaleButton.addEventListener("click", event => {
+   populateDOM(people.filter(person => person.gender === "female"))
+  })
+
+  otherButton.addEventListener("click", event => {
+   populateDOM(otherCharacters)
   })
 
 //"url": "https://swapi.co/api/people.10/"
@@ -29,15 +34,18 @@ maleButton.addEventListener("click", (event) => {
 function getCharNumber(url) {
 let end = url.lastIndexOf('/')
 let start = end - 2
-console.log(`Start is: ${url.charAt(start)} and end is: ${url.charAt(end)}`)
+if(url.charAt(start) === '/') {
+start++
+}
+return url.slice(start, end)
 }
 
-getCharNumber("https://swapi.co/api/people.10/")
+//getCharNumber("https://swapi.co/api/people.1/")
 
-function populateDOM(maleCharacters)
-{maleCharacters.forEach(person => {
+function populateDOM(characters)
+{characters.forEach(person => {
    // need to extract the number from the person.url property
-   let charNum = 1
+   let charNum = getCharNumber(person.url)
    let anchorWrap = document.createElement("a")
    anchorWrap.href = "#"
 
