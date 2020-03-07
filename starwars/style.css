@@ -2,6 +2,11 @@
     box-sizing: border-box;
 }
 
+h1 {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 body {
     background-color: #cccccc;
 }
@@ -12,8 +17,13 @@ a > img {
 }
 
 button {
-    font-size: 2rem;
+    font-size: 1rem;
+    color: white;
+    background-image: linear-gradient(to bottom right, #216583, #ddd);
     background-color: #aba;
     border-radius: 10px;
     padding: 8px;
+}
+body {
+background-image: url("https://images.unsplash.com/photo-1520034475321-cbe63696469a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80")
 }
