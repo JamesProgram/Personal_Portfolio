@@ -19,3 +19,5 @@ nav.appendChild(navList)
 
 })
 }
+
+populateNav(starships)
