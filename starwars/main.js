@@ -44,8 +44,6 @@ function removeChildren(element) {
    }
 }
 
-//getCharNumber("https://swapi.co/api/people.1/")
-
 function populateDOM(characters)
 {removeChildren(gallery)
    characters.forEach(person => {
