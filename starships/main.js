@@ -5,7 +5,7 @@ const nav = document.querySelector('.nav')
 
 const navList = document.querySelector('.navList')
 
-const shipView = querySelector('.main')
+const shipView = document.querySelector('.main')
 
 function populateNav(starships) {
    starships.forEach(starship => {
@@ -29,6 +29,7 @@ function populateNav(starships) {
 }
 
 function populateShipView(shipData) {
+   removeChildren(shipView)
    let shipNum = getLastNumber(shipData.url)
    let shipImage = document.createElement("img")
    shipImage.src = `https://starwars-visualguide.com/
