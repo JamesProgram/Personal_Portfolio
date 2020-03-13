@@ -15,7 +15,7 @@ function populateNav(starships) {
       anchorWrap.addEventListener('click', event => {
          let shipName = event.target.textContent
          const foundShip = starships.find(ship => ship.Name === shipName)
-         populateShipView.log(foundShip)
+         populateShipView(foundShip)
       })
 
       let listItem = document.createElement('li')
@@ -35,7 +35,6 @@ function populateShipView(shipData) {
    shipImage.src = `https://starwars-visualguide.com/
    assets/img/characters/${shipNum}.jpg`
    shipView.appendChild(shipImage)
-
 }
 
 populateNav(starships)
