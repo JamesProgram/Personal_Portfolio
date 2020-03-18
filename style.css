@@ -46,6 +46,7 @@ body {
     font-size: 1.5rem;
     text-decoration: none;
     color: white;
+    scroll-behavior: smooth;
 }
 .nav-list li {
     margin: 0;
