@@ -52,6 +52,14 @@ body {
     margin: 0;
 }
 
+a:link {
+    color: white;
+  }
+  
+.nav-list a:hover {
+    color: yellow;
+  }
+
 #welcome-section {
     display: flex;
     flex-direction: column;
@@ -96,7 +104,7 @@ body {
 figcaption {
 text-align: center;
 font-size: 1.0rem;
-color: antiquewhite;
+color: white;
 }
 
 /* Contact section */
@@ -140,7 +148,7 @@ footer {
     height: 6rem;
     background-color: darkcyan;
     font-size: 20px;
-    color: #fff;
+    color: antiquewhite;
 }
 
 /* 1200px / 16px = 75em */
