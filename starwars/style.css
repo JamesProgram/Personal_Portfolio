@@ -2,10 +2,6 @@
     box-sizing: border-box;
 }
 
-header {
-    background-color: darkslateblue;
-}
-
 h1 {
     color: white;
     text-align: center;

@@ -2,9 +2,6 @@
     box-sizing: border-box;
 }
 
-header {
-    background-color: darkslateblue;
-}
 
 header, footer {
     display: flex;
