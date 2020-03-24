@@ -24,7 +24,8 @@ button {
     background-image: linear-gradient(to bottom right, #216583, #ddd);
     background-color: #aba;
     border-radius: 10px;
-    padding: 8px;
+    margin: 10px;
+    padding: 8px 147px 8px 147px;
 }
 
 body {
