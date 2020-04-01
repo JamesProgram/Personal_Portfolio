@@ -102,10 +102,6 @@ a:link {
 }
 
 figcaption {
-  background-color: black;
-  border-radius: 20px;
-  opacity: 0.60;
-  border-left: thick #c0c0c0 solid;
   color: #fff;
   font: sans-serif;
   font-size: 18px;
