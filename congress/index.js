@@ -2,18 +2,21 @@ import { senators } from '../data/senators.js'
 
 const senatorDiv = document.querySelector('.senators')
 
-const senatorNames = senators.map(senator => {
+function getSimplifiedSenators(senatorArray) {
+    return senatorArray.map(senator => {
     let middleName = senator.middle_name ? ` ${senator.middle_name} ` : ` `
     return {
         id: senator.id,
         name: `${senator.first_name}${middleName}${senator.last_name}`,
-        imgURL: `https://www.govtrack.us/static/legislator-photos/${senator.govtrack_id}-200px.jpeg`
+        imgURL: `https://www.govtrack.us/static/legislator-photos/${senator.govtrack_id}-200px.jpeg`,
+        seniority: senator.seniority
     }
 })
+}
 
-function populateSenatorDiv(justSenatorNames) {
-    console.log(justSenatorNames)
-    justSenatorNames.forEach( senator => {
+function populateSenatorDiv(simpleSenators) {
+    console.log(simpleSenators)
+    simpleSenators.forEach( senator => {
         let senFigure = document.createElement('figure')
         let figImg = document.createElement('img')
         let figCaption = document.createElement('figcaption')
@@ -34,4 +37,7 @@ const filterSenators = (prop, value) => {
    })
 }
 
-populateSenatorDiv(senatorNames)
+const republicans = filterSenators('party', 'R')
+console.log(republicans)
+
+populateSenatorDiv(getSimplifiedSenators(republicans))
