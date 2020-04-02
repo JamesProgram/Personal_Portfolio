@@ -12,6 +12,7 @@ const senatorNames = senators.map(senator => {
 })
 
 function populateSenatorDiv(justSenatorNames) {
+    console.log(justSenatorNames)
     justSenatorNames.forEach( senator => {
         let senFigure = document.createElement('figure')
         let figImg = document.createElement('img')
@@ -25,7 +26,6 @@ function populateSenatorDiv(justSenatorNames) {
         senatorDiv.appendChild(senFigure)
 
     })
-    main.appendChild(senatorDiv)
 }
 
 const filterSenators = (prop, value) => {
