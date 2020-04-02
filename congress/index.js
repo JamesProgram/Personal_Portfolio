@@ -9,7 +9,7 @@ function getSimplifiedSenators(senatorArray) {
         id: senator.id,
         name: `${senator.first_name}${middleName}${senator.last_name}`,
         imgURL: `https://www.govtrack.us/static/legislator-photos/${senator.govtrack_id}-200px.jpeg`,
-        seniority: senator.seniority
+        seniority: parseInt(senator.seniority, 10)
     }
 })
 }
@@ -38,6 +38,13 @@ const filterSenators = (prop, value) => {
 }
 
 const republicans = filterSenators('party', 'R')
-console.log(republicans)
+
+const mostSeniority = getSimplifiedSenators(republicans).reduce(
+    (acc, senator) => {   
+        return acc.seniority > senator.seniority ? acc : senator
+    }
+)
+
+console.log(mostSeniority)
 
 populateSenatorDiv(getSimplifiedSenators(republicans))
