@@ -1,23 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet">
     <title>People of Congress</title>
+    <script>
+        function bgChange(bg) {
+            document.body.style.background = bg;
+        }
+    </script>
 </head>
+
 <body>
     <header>
-<h1>People of Congress</h1>
+        <h1>People of Congress</h1>
     </header>
+    <table style="width:300px;height:100px">
+        <tr>
+            Hover over the square with your favorite party color.
+            <td onmouseover="bgChange(this.style.backgroundColor)" onmouseout="bgChange('transparent')"
+                style="background-color:Red">
+                Republican
+            </td>
+            <td onmouseover="bgChange(this.style.backgroundColor)" onmouseout="bgChange('transparent')"
+                style="background-color:Blue">
+                Democrat
+            </td>
+            <td onmouseover="bgChange(this.style.backgroundColor)" onmouseout="bgChange('transparent')"
+                style="background-color:gray">
+                Independent
+            </td>
+        </tr>
+    </table>
     <main>
-      <div class="senators">
-          
-      </div>
+        <div class="senators">
+
+        </div>
     </main>
     <footer>
 
     </footer>
     <script type="module" src="index.js"></script>
 </body>
+
 </html>
