@@ -41,6 +41,8 @@ const democrats = filterSenators('party', 'D')
 const mostSeniority = getSimplifiedSenators(republicans).reduce(
     (acc, senator) => {
         return acc.seniority > senator.seniority ? acc : senator
+    })
+
 const mostSeniority = getSimplifiedSenators(senators).reduce((acc, senator) => acc.seniority > senator.seniority ? acc : senator)
 
 const missedVotes = getSimplifiedSenators(senators).reduce((acc, senator) => acc.missedVotesPct > senator.missedVotesPct ? acc : senator)
@@ -51,11 +53,10 @@ const mostLoyal = getSimplifiedSenators(republicans).reduce((acc, senator) => {
     if (senator.loyaltyPct === 100) {
         loyalArray.push(senator)
     }
-}
     return acc.loyaltyPct > senator.loyaltyPct ? acc : senator
 })
 
-console.log(mostSeniority),
+console.log(mostSeniority)
 console.log(loyalArray)
 
 populateSenatorDiv(getSimplifiedSenators(republicans))
