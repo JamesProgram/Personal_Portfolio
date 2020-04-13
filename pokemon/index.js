@@ -25,14 +25,8 @@ async function getAPIData(url) {
       pokeCard.addEventListener('click', () =>
         pokeCard.classList.toggle('is-flipped'),
       )
-      let pokeFront = document.createElement('div')
-      pokeFront.className = 'card__face card__face--front'
-      pokeFront.textContent = singlePokemon.name
-      let pokeBack = document.createElement('div')
-      pokeBack.className = 'card__face card__face--back'
-      pokeBack.textContent = 'back'
-      //let pokeFront = populateCardFront(singlePokemon)
-      //let pokeBack = populateCardBack(singlePokemon)
+      let pokeFront = populateCardFront(singlePokemon)
+      let pokeBack = populateCardBack(singlePokemon)
   
       pokeCard.appendChild(pokeFront)
       pokeCard.appendChild(pokeBack)

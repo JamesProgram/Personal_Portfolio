@@ -43,7 +43,7 @@ const mostSeniority = getSimplifiedSenators(republicans).reduce(
         return acc.seniority > senator.seniority ? acc : senator
     })
 
-const mostSeniority = getSimplifiedSenators(senators).reduce((acc, senator) => acc.seniority > senator.seniority ? acc : senator)
+
 
 const missedVotes = getSimplifiedSenators(senators).reduce((acc, senator) => acc.missedVotesPct > senator.missedVotesPct ? acc : senator)
 
