@@ -64,7 +64,7 @@ async function getAPIData(url) {
     } else if (pokemon.id > 9 && pokemon.id < 100) {
       return `0${pokemon.id}`
     } else if (pokemon.id > 809) {
-      return `pokeball`
+      return `Alolan-Raticate`
     }
   }
   
@@ -92,16 +92,16 @@ async function getAPIData(url) {
   }
   
   function addPokemon() {
-    let Thoremon = new Pokemon(190, 290, 'thoremon',
+    let alolan = new Pokemon(190, 290, 'alolan raticate',
       [
         {
           ability: {
-          name: 'Thunder Belly'
+          name: 'Gluttony'
           }
         },
         {
           ability: {
-          name: 'Beard Power'
+          name: 'Hustle'
           }
         },
         {
@@ -110,6 +110,6 @@ async function getAPIData(url) {
           }
         }
     ])
-    populatePokeCard(Thoremon)
+    populatePokeCard(alolan)
   }
 

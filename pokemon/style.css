@@ -7,16 +7,6 @@ h1 {
   font-family: Pokemon;
 }
 
-button {
-  font-size: 1rem;
-  color: white;
-  background-image: linear-gradient(to bottom right, #216583, #ddd);
-  background-color: #aba;
-  border-radius: 10px;
-  margin: 10px;
-  padding: 8px 147px 8px 147px;
-}
-
 @import url(//db.onlinewebfonts.com/c/f4d1593471d222ddebd973210265762a?family=Pokemon);
 
 header {
@@ -60,7 +50,7 @@ header {
   color: yellow;
   text-shadow: blue 1px 0 10px;
   text-align: center;
-  font-size: 30px;
+  font-size: 25px;
   font-family: Pokemon;
   backface-visibility: hidden;
 }
