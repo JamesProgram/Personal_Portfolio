@@ -1,3 +1,10 @@
+ body
+ {
+    background-image: url('https://images.unsplash.com/photo-1510265382668-7b564935d7b5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2980&q=80');
+    background-color: #cccccc;
+}
+
+
 .senators {
     display: flex;
     flex-wrap: wrap;
@@ -11,6 +18,7 @@ td {
 }
 
 h1 {
+    color: white;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.8rem;
@@ -20,5 +28,16 @@ h1 {
 
 p {
     font-family: Arial, Helvetica, sans-serif;
+    color: white;
 }
 
+figCaption {
+    padding: 6px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+img {
+    border-style: inset;
+    border-radius: 30px;
+}
