@@ -25,9 +25,10 @@ button {
     background-color: #aba;
     border-radius: 10px;
     margin: 10px;
-    padding: 8px 147px 8px 147px;
+    padding: 8px 30px 8px 30px;
 }
 
 body {
-background-image: url("https://images.unsplash.com/photo-1520034475321-cbe63696469a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80")
+background-image: url("https://images.unsplash.com/photo-1579566346927-c68383817a25?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80");
+background-size: cover;
 }
