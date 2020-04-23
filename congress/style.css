@@ -11,13 +11,7 @@
 }
 
 
-td {
-    text-align: center;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-h1 {
+h1, header {
     color: white;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
@@ -29,12 +23,30 @@ h1 {
 p {
     font-family: Arial, Helvetica, sans-serif;
     color: white;
+    font-size: 2em;
 }
 
 figCaption {
-    padding: 6px;
+    display: flex;
+    justify-content: space-around;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
+}
+
+.fa-democrat {
+    color: blue;
+    text-shadow: 0 0 4px white;
+}
+
+.fa-republican {
+    color: red;
+    text-shadow: 0 0 6px white;
+
+}
+
+.fa-star {
+    color: yellow;
+    text-shadow: 0 0 6px white;
 }
 
 img {

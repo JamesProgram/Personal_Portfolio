@@ -21,9 +21,14 @@ function populateSenatorDiv(simpleSenators) {
         let senFigure = document.createElement('figure')
         let figImg = document.createElement('img')
         let figCaption = document.createElement('figcaption')
-            
+        let partyIcon = document.createElement('i')
+        if(senator.party === 'R') partyIcon.className = 'fas fa-republican'
+        if(senator.party === 'D') partyIcon.className = 'fas fa-democrat' 
+        if(senator.party === 'ID') partyIcon.className = 'fas fa-star'      
         figImg.src = senator.imgURL
         figCaption.textContent = senator.name
+
+        figCaption.appendChild(partyIcon)
         senFigure.appendChild(figImg)
         senFigure.appendChild(figCaption)
         senatorDiv.appendChild(senFigure)
@@ -59,5 +64,4 @@ const mostLoyal = getSimplifiedSenators(republicans).reduce((acc, senator) => {
 console.log(mostSeniority)
 console.log(loyalArray)
 
-populateSenatorDiv(getSimplifiedSenators(republicans))
 populateSenatorDiv(getSimplifiedSenators(senators))
