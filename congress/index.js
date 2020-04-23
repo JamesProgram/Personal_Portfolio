@@ -24,7 +24,7 @@ function populateSenatorDiv(simpleSenators) {
         let partyIcon = document.createElement('i')
         if(senator.party === 'R') partyIcon.className = 'fas fa-republican'
         if(senator.party === 'D') partyIcon.className = 'fas fa-democrat' 
-        if(senator.party === 'ID') partyIcon.className = 'fas fa-star'      
+        if(senator.party === 'R') partyIcon.className = 'fas fa-republican'      
         figImg.src = senator.imgURL
         figCaption.textContent = senator.name
 
