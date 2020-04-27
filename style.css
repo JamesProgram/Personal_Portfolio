@@ -102,7 +102,7 @@ a:link {
 }
 
 figcaption {
-  color: #fff;
+  color: white;
   font: sans-serif;
   font-size: 18px;
   padding: 10px;
@@ -123,20 +123,26 @@ figcaption {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-size: 20px;
     height: 10vh;
     padding: 150px 0px 15px 0px;
-    color: #fff;
+    color: white;
   }
 
 #contact-links {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    font-size: 30px;
+    font-size: 45px;
     text-align: center;
-    width: 100%;
+    width: 60%;
     height: 30vh;
     padding: 0 2rem;
+
+  }
+
+  #profile-link {
+    color: darkgrey;
   }
 
 a {
